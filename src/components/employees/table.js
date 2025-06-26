@@ -3,8 +3,8 @@ import { css, html, LitElement } from "lit";
 import { employeeStore } from "../../services/employee-store";
 import { cssVariables, resetCss } from "../../styles/shared-styles.js";
 import { formatDate } from "../../utils/date-formatter";
-import '../ui/app-button';
 import '../ui/app-checkbox';
+import '../ui/empty-state.js';
 export class EmployeesTable extends LitElement {
   static styles = [
     resetCss,
@@ -17,6 +17,7 @@ export class EmployeesTable extends LitElement {
         border-radius: 0.5rem;
         background-color: white;
       }
+
 
       table {
         background-color: white;
@@ -91,7 +92,6 @@ export class EmployeesTable extends LitElement {
       }
 
       td .actions-wrapper a {
-        text-decoration: none;
         padding: 0.25rem;
         margin: -0.25rem;
       }
@@ -131,6 +131,26 @@ export class EmployeesTable extends LitElement {
 
         th:last-child, td:last-child {
           padding-right: 0.5rem;
+        }
+      }
+
+
+      @media (max-width: 768px) {
+        th, td {
+          padding: 1rem 0.5rem;
+          font-size: 14px;
+        }
+
+        th:first-child, td:first-child {
+          padding-left: 1rem;
+        }
+
+        th:last-child, td:last-child {
+          padding-right: 1rem;
+        }
+
+        table {
+          min-width: 1000px;
         }
       }
     `
@@ -179,36 +199,7 @@ export class EmployeesTable extends LitElement {
   }
 
   renderEmptyView() {
-    const hasSearch = employeeStore.getSearchQuery().trim();
-    const hasEmployees = employeeStore.getAllEmployees().length > 0;
-
-    return html`
-      <tr>
-        <td colspan="10" style="text-align: center; padding: 3rem 1rem;">
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 1rem; max-width: 400px; margin: 0 auto;">
-            <div style="font-size: 1.125rem; font-weight: 500; color: #333;">
-              ${hasSearch ? msg('No employees found') : msg('No employees yet')}
-            </div>
-            <div style="color: #666; text-align: center; line-height: 1.5;">
-              ${hasSearch
-                ? msg('Try adjusting your search criteria or clear the search to see all employees.')
-                : msg('Get started by adding your first employee or loading sample data.')
-              }
-            </div>
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
-              <app-button @click=${() => window.location.href = '/employee/add'}>
-                ${msg('Add Employee')}
-              </app-button>
-              ${!hasEmployees ? html`
-                <app-button variant="outline" @click=${() => employeeStore.seedData()}>
-                  ${msg('Load Sample Data')}
-                </app-button>
-              ` : ''}
-            </div>
-          </div>
-        </td>
-      </tr>
-    `
+    return html`<empty-state></empty-state>`;
   }
 
   renderEmployeesView() {
@@ -247,37 +238,39 @@ export class EmployeesTable extends LitElement {
   }
 
   render() {
-    return html`
+    const isEmpty = employeeStore.getPaginatedEmployees().length === 0;
 
-        <div class="table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>
-                  <app-checkbox
-                    .checked=${employeeStore.getSelectionState() === 'all'}
-                    .indeterminate=${employeeStore.getSelectionState() === 'some'}
-                    @change=${this.handleHeaderCheckboxChange}
-                  ></app-checkbox>
-                </th>
-                <th>${msg('First Name')}</th>
-                <th>${msg('Last Name')}</th>
-                <th>${msg('Date of Employment')}</th>
-                <th>${msg('Date of Birth')}</th>
-                <th>${msg('Phone')}</th>
-                <th>${msg('Email')}</th>
-                <th>${msg('Department')}</th>
-                <th>${msg('Position')}</th>
-                <th>${msg('Actions')}</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${employeeStore.getPaginatedEmployees().length === 0 ?
-    this.renderEmptyView()
-              : this.renderEmployeesView()
-              }
-            </tbody>
-          </table>
+    if (isEmpty) {
+      return this.renderEmptyView();
+    }
+
+    return html`
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <app-checkbox
+                  .checked=${employeeStore.getSelectionState() === 'all'}
+                  .indeterminate=${employeeStore.getSelectionState() === 'some'}
+                  @change=${this.handleHeaderCheckboxChange}
+                ></app-checkbox>
+              </th>
+              <th>${msg('First Name')}</th>
+              <th>${msg('Last Name')}</th>
+              <th>${msg('Date of Employment')}</th>
+              <th>${msg('Date of Birth')}</th>
+              <th>${msg('Phone')}</th>
+              <th>${msg('Email')}</th>
+              <th>${msg('Department')}</th>
+              <th>${msg('Position')}</th>
+              <th>${msg('Actions')}</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${this.renderEmployeesView()}
+          </tbody>
+        </table>
       </div>
     `
   }

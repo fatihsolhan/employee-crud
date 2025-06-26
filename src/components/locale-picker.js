@@ -13,14 +13,13 @@ export class LocalePicker extends LitElement {
     }
 
     .locale-select {
-      padding: 0.5rem 0.75rem;
+      padding: 0.5rem;
       border: 1px solid #e1e1e1;
       border-radius: 0.5rem;
-      font-size: 0.875rem;
+      font-size: 0.75rem;
       background: white;
       cursor: pointer;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      min-width: 100px;
     }
 
     .locale-select:focus {
@@ -31,6 +30,12 @@ export class LocalePicker extends LitElement {
 
     .locale-select:hover {
       border-color: #ccc;
+    }
+    @media (min-width: 640px) {
+      .locale-select {
+        font-size: 0.875rem;
+        padding: 0.5rem 0.75rem;
+      }
     }
   `];
 

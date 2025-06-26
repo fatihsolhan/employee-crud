@@ -29,7 +29,6 @@ export class EmployeeFormPage extends LitElement {
 
       .back-link {
         color: #6E6E6E;
-        text-decoration: none;
         font-size: 0.875rem;
         display: flex;
         align-items: center;

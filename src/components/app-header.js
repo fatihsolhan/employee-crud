@@ -42,7 +42,7 @@ export class AppHeader extends LitElement {
     .logo {
       display: flex;
       align-items: center;
-      text-decoration: none;
+      gap: 0.5rem;
     }
     .logo img {
       height: 24px;
@@ -50,10 +50,10 @@ export class AppHeader extends LitElement {
     }
 
     .logo span {
-      margin-left: 0.5rem;
       font-size: 14px;
       color: #000;
       font-weight: 500;
+      display: none;
     }
     .app-header-container {
       display: flex;
@@ -63,11 +63,13 @@ export class AppHeader extends LitElement {
     .menu {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0rem;
     }
     .menu a {
-      text-decoration: none;
       border-bottom: 1px solid transparent;
+    }
+    .menu a, .menu app-button span {
+      font-size: 13px;
     }
     .menu a:not(:hover).active {
       border-bottom-color: var(--primary-color);
@@ -76,8 +78,17 @@ export class AppHeader extends LitElement {
       .app-header {
         padding: 0.5rem 0;
       }
+      .menu {
+        gap: 0.75rem;
+      }
+      .menu a, .menu app-button span {
+        font-size: 0.875rem;
+      }
       .logo img {
         height: 40px;
+      }
+      .logo span {
+        display: inline-block;
       }
     }
   `

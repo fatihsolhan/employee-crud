@@ -16,38 +16,29 @@ describe('EmployeesTable', () => {
   });
 
   describe('empty state', () => {
-    it('should display empty state when no employees', async () => {
+    it('should display empty state component when no employees', async () => {
       await element.updateComplete;
-      const emptyRow = element.shadowRoot.querySelector('tbody tr');
-      expect(emptyRow).to.exist;
-      expect(emptyRow.textContent).to.include('No employees yet');
+      const emptyState = element.shadowRoot.querySelector('empty-state');
+      expect(emptyState).to.exist;
     });
 
-    it('should display "no employees yet" when no search query', async () => {
-      employeeStore.searchQuery = '';
-      employeeStore.dispatchEvent(new CustomEvent('settings-changed'));
+    it('should render empty state component when no search results', async () => {
+      employeeStore.employees = [createEmployee()];
+      employeeStore.setSearchQuery('nonexistent');
       await element.updateComplete;
 
-      const emptyRow = element.shadowRoot.querySelector('tbody tr');
-      expect(emptyRow.textContent).to.include('No employees yet');
+      const emptyState = element.shadowRoot.querySelector('empty-state');
+      expect(emptyState).to.exist;
     });
 
-    it('should display "no employees found" when searching', async () => {
-      employeeStore.searchQuery = 'nonexistent';
-      employeeStore.dispatchEvent(new CustomEvent('settings-changed'));
-      await element.updateComplete;
-
-      const emptyRow = element.shadowRoot.querySelector('tbody tr');
-      expect(emptyRow.textContent).to.include('No employees found');
-    });
-
-    it('should display load sample data button when no employees', async () => {
-      employeeStore.searchQuery = '';
-      employeeStore.dispatchEvent(new CustomEvent('settings-changed'));
-      await element.updateComplete;
-
-      const loadButton = element.shadowRoot.querySelector('app-button[variant="outline"]');
-      expect(loadButton).to.exist;
+    it('should show table when employees exist', async () => {
+      await setupStore(3, element);
+      
+      const table = element.shadowRoot.querySelector('table');
+      const emptyState = element.shadowRoot.querySelector('empty-state');
+      
+      expect(table).to.exist;
+      expect(emptyState).to.not.exist;
     });
   });
 

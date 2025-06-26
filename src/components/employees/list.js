@@ -5,6 +5,7 @@ import { cssVariables, resetCss } from "../../styles/shared-styles.js";
 import { formatDate } from "../../utils/date-formatter.js";
 import '../ui/app-button.js';
 import '../ui/app-checkbox.js';
+import '../ui/empty-state.js';
 
 export class EmployeesList extends LitElement {
   static styles = [
@@ -118,35 +119,6 @@ export class EmployeesList extends LitElement {
         background: var(--primary-color-light);
       }
 
-      .empty-state {
-        text-align: center;
-        padding: 3rem 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-
-      .empty-title {
-        font-size: 1.125rem;
-        font-weight: 500;
-        color: #333;
-      }
-
-      .empty-message {
-        color: #666;
-        line-height: 1.5;
-      }
-
-      .empty-actions {
-        display: flex;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 0.5rem;
-      }
 
       .list-header {
         display: flex;
@@ -232,32 +204,7 @@ export class EmployeesList extends LitElement {
   }
 
   renderEmptyView() {
-    const hasSearch = employeeStore.getSearchQuery().trim();
-    const hasEmployees = employeeStore.getAllEmployees().length > 0;
-
-    return html`
-      <div class="empty-state">
-        <div class="empty-title">
-          ${hasSearch ? msg('No employees found') : msg('No employees yet')}
-        </div>
-        <div class="empty-message">
-          ${hasSearch
-            ? msg('Try adjusting your search criteria or clear the search to see all employees.')
-            : msg('Get started by adding your first employee or loading sample data.')
-          }
-        </div>
-        <div class="empty-actions">
-          <app-button @click=${() => window.location.href = '/employee/add'}>
-            ${msg('Add Employee')}
-          </app-button>
-          ${!hasEmployees ? html`
-            <app-button variant="outline" @click=${() => employeeStore.seedData()}>
-              ${msg('Load Sample Data')}
-            </app-button>
-          ` : ''}
-        </div>
-      </div>
-    `;
+    return html`<empty-state></empty-state>`;
   }
 
   renderEmployeeCard(employee) {

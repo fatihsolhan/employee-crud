@@ -18,24 +18,27 @@ describe('EmployeesList', () => {
   describe('empty state', () => {
     it('should display empty state when no employees', async () => {
       await element.updateComplete;
-      const emptyState = element.shadowRoot.querySelector('.empty-state');
+      const emptyState = element.shadowRoot.querySelector('empty-state');
       expect(emptyState).to.exist;
     });
 
-    it('should display appropriate empty message based on search', async () => {
-      employeeStore.searchQuery = '';
+    it('should render empty state component when no search results', async () => {
+      employeeStore.employees = [createEmployee()];
+      employeeStore.setSearchQuery('nonexistent');
       await element.updateComplete;
 
-      const emptyMessage = element.shadowRoot.querySelector('.empty-state .empty-title');
-      expect(emptyMessage).to.exist;
+      const emptyState = element.shadowRoot.querySelector('empty-state');
+      expect(emptyState).to.exist;
     });
 
-    it('should display load sample data button when no search query', async () => {
-      employeeStore.searchQuery = '';
-      await element.updateComplete;
-
-      const loadButton = element.shadowRoot.querySelector('app-button[variant="outline"]');
-      expect(loadButton).to.exist;
+    it('should show list container when employees exist', async () => {
+      await setupStore(3, element);
+      
+      const listContainer = element.shadowRoot.querySelector('.list-container');
+      const emptyState = element.shadowRoot.querySelector('empty-state');
+      
+      expect(listContainer).to.exist;
+      expect(emptyState).to.not.exist;
     });
   });
 
@@ -133,19 +136,6 @@ describe('EmployeesList', () => {
     });
   });
 
-  describe('load sample data', () => {
-    it('should load sample data when button clicked', async () => {
-      let seedDataCalled = false;
-      const original = mockStore({ seedData: () => { seedDataCalled = true; } });
-
-      await element.updateComplete;
-      const loadButton = element.shadowRoot.querySelector('app-button[variant="outline"]');
-      loadButton.click();
-
-      expect(seedDataCalled).to.be.true;
-      restoreStore(original);
-    });
-  });
 
   describe('responsive design', () => {
     it('should have responsive grid layout', () => {
