@@ -54,38 +54,6 @@ yarn install
 yarn start
 ```
 
-### Available Scripts
-
-```bash
-yarn start          # Development server with hot reload
-yarn build          # Production build
-yarn test           # Run test suite
-yarn test:watch     # Run tests in watch mode
-yarn lint           # Lint code
-yarn format         # Format code
-```
-
-## 📁 Project Structure
-
-```
-src/
-├── components/           # Web components
-│   ├── ui/              # Reusable UI components
-│   ├── employee-form-page.js
-│   ├── employees-list.js
-│   └── navigation-menu.js
-├── services/            # Business logic and state management
-│   ├── employee-store.js
-│   └── app-store.js
-├── styles/              # Shared styles and CSS variables
-├── locales/             # Translation files (XLIFF)
-└── employee-crud-app.js # Main application component
-
-test/                    # Comprehensive test suite
-├── test-utils.js        # Shared testing utilities
-└── *.test.js           # Component and service tests
-```
-
 ## 🎯 Features Implemented
 
 This project successfully implements comprehensive employee management functionality:
@@ -103,7 +71,7 @@ This project successfully implements comprehensive employee management functiona
 - [x] Responsive design without external CSS frameworks
 - [x] localStorage-based state management
 - [x] Turkish/English internationalization
-- [x] 85%+ test coverage (achieved 88.38%)
+- [x] 85%+ test coverage
 - [x] Modern JavaScript with LitElement
 
 ### ✅ Validation Features
