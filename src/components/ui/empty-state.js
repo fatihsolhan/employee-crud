@@ -44,6 +44,14 @@ export class EmptyState extends LitElement {
   constructor() {
     super();
     updateWhenLocaleChanges(this);
+
+    employeeStore.addEventListener('employees-changed', () => {
+      this.requestUpdate();
+    });
+
+    employeeStore.addEventListener('settings-changed', () => {
+      this.requestUpdate();
+    });
   }
 
   handleLoadSampleData() {

@@ -70,6 +70,7 @@ describe('EmptyState', () => {
   describe('when employees exist but search returns no results', () => {
     beforeEach(async () => {
       employeeStore.employees = [createEmployee()];
+      employeeStore.dispatchEvent(new CustomEvent('employees-changed'));
       employeeStore.setSearchQuery('nonexistent');
       await element.updateComplete;
     });
@@ -110,6 +111,7 @@ describe('EmptyState', () => {
       expect(title.textContent.trim()).to.include('No employees yet');
 
       employeeStore.employees = [createEmployee()];
+      employeeStore.dispatchEvent(new CustomEvent('employees-changed'));
       employeeStore.setSearchQuery('nonexistent');
       await element.updateComplete;
 
@@ -125,6 +127,7 @@ describe('EmptyState', () => {
       expect(sampleButton).to.exist;
 
       employeeStore.employees = [createEmployee()];
+      employeeStore.dispatchEvent(new CustomEvent('employees-changed'));
       employeeStore.setSearchQuery('nonexistent');
       await element.updateComplete;
 
