@@ -1,10 +1,14 @@
 import { configureLocalization } from '@lit/localize';
 import { sourceLocale, targetLocales } from './locale-codes.js';
 
+const localeModules = {
+  'tr': () => import('./locales/tr.js'),
+};
+
 export const {getLocale, setLocale} = configureLocalization({
   sourceLocale,
   targetLocales,
-  loadLocale: (locale) => import(`./locales/${locale}.js`),
+  loadLocale: (locale) => localeModules[locale]?.() || Promise.resolve({}),
 });
 
 export const setLocaleFromUrl = async () => {
