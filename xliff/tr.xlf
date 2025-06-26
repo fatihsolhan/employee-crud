@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+<file target-language="tr" source-language="en" original="lit-localize-inputs" datatype="plaintext">
+<body>
+<trans-unit id="sd1f44f1a8bc20e67">
+  <source>Email</source>
+  <target>E-posta</target>
+</trans-unit>
+<trans-unit id="sf1bc83d2509bafcf">
+  <source>Phone</source>
+  <target>Telefon</target>
+</trans-unit>
+<trans-unit id="s1e45a4d7635fbda7">
+  <source>Department</source>
+  <target>Departman</target>
+</trans-unit>
+<trans-unit id="sc1611c0558728a2a">
+  <source>Position</source>
+  <target>Pozisyon</target>
+</trans-unit>
+<trans-unit id="se7a47ae0fba5aae5">
+  <source>Employment Date</source>
+  <target>İşe Başlama Tarihi</target>
+</trans-unit>
+<trans-unit id="s8af61807443f32a4">
+  <source>Actions</source>
+  <target>İşlemler</target>
+</trans-unit>
+<trans-unit id="sdc673e73b5c13aea">
+  <source>Delete</source>
+  <target>Sil</target>
+</trans-unit>
+<trans-unit id="s53802e3f37d072a7">
+  <source>Date of Birth</source>
+  <target>Doğum Tarihi</target>
+</trans-unit>
+<trans-unit id="s0bf5d587a07fcaea">
+  <source>Add New Employee</source>
+  <target>Yeni Çalışan Ekle</target>
+</trans-unit>
+<trans-unit id="s61b8861b5836452e">
+  <source>Search employees...</source>
+  <target>Çalışan ara...</target>
+</trans-unit>
+<trans-unit id="sf8758effabc86aeb">
+  <source>No employees found</source>
+  <target>Çalışan bulunamadı</target>
+</trans-unit>
+<trans-unit id="s27707a7616f7f789">
+  <source>First name is required</source>
+  <target>Ad zorunludur</target>
+</trans-unit>
+<trans-unit id="sb7c9b2995d6869b1">
+  <source>Last name is required</source>
+  <target>Soyad zorunludur</target>
+</trans-unit>
+<trans-unit id="sf07904be22a6165a">
+  <source>Email is required</source>
+  <target>E-posta zorunludur</target>
+</trans-unit>
+<trans-unit id="s9145aa93cf917ae4">
+  <source>Please enter a valid email address</source>
+  <target>Lütfen geçerli bir e-posta adresi girin</target>
+</trans-unit>
+<trans-unit id="sb79d7fb6037df0d9">
+  <source>Email address already exists</source>
+  <target>E-posta adresi zaten mevcut</target>
+</trans-unit>
+<trans-unit id="s04c8b8b0e1034f09">
+  <source>Phone number is required</source>
+  <target>Telefon numarası zorunludur</target>
+</trans-unit>
+<trans-unit id="s732d031b2be46181">
+  <source>Please enter a valid phone number</source>
+  <target>Lütfen geçerli bir telefon numarası girin</target>
+</trans-unit>
+<trans-unit id="sdf755a174e06216c">
+  <source>Phone number already exists</source>
+  <target>Telefon numarası zaten mevcut</target>
+</trans-unit>
+<trans-unit id="se2083c8b4aa99aba">
+  <source>Date of birth is required</source>
+  <target>Doğum tarihi zorunludur</target>
+</trans-unit>
+<trans-unit id="s179d04264efd4389">
+  <source>Employee must be between 18 and 65 years old</source>
+  <target>Çalışan 18-65 yaş aralığında olmalıdır</target>
+</trans-unit>
+<trans-unit id="sf72b66f732c5036d">
+  <source>Date of employment is required</source>
+  <target>İşe başlama tarihi zorunludur</target>
+</trans-unit>
+<trans-unit id="s54866c776fdee066">
+  <source>Employment date cannot be in the future</source>
+  <target>İşe başlama tarihi gelecekte olamaz</target>
+</trans-unit>
+<trans-unit id="sf71f9578ca2ddb9a">
+  <source>Department is required</source>
+  <target>Departman zorunludur</target>
+</trans-unit>
+<trans-unit id="s35911e54e5c305df">
+  <source>Position is required</source>
+  <target>Pozisyon zorunludur</target>
+</trans-unit>
+<trans-unit id="se7b2b5e2255d47f1">
+  <source>Are you sure you want to add this employee?</source>
+  <target>Bu çalışanı eklemek istediğinizden emin misiniz?</target>
+</trans-unit>
+<trans-unit id="s77fec0523d866299">
+  <source>Are you sure you want to update this employee?</source>
+  <target>Bu çalışanı güncellemek istediğinizden emin misiniz?</target>
+</trans-unit>
+<trans-unit id="s8a9fa9684ba37683">
+  <source>Edit Employee</source>
+  <target>Çalışanı Düzenle</target>
+</trans-unit>
+<trans-unit id="sb43fdccd441a53bf">
+  <source>Back to Employee List</source>
+  <target>Çalışan Listesine Dön</target>
+</trans-unit>
+<trans-unit id="s2c57913ffd36d298">
+  <source>First Name</source>
+  <target>Ad</target>
+</trans-unit>
+<trans-unit id="s95a75a2392af5780">
+  <source>Last Name</source>
+  <target>Soyad</target>
+</trans-unit>
+<trans-unit id="s772528836550622c">
+  <source>Date of Employment</source>
+  <target>İşe Başlama Tarihi</target>
+</trans-unit>
+<trans-unit id="s871b1fe6d1846958">
+  <source>Phone Number</source>
+  <target>Telefon Numarası</target>
+</trans-unit>
+<trans-unit id="s1e2e135dac5ba993">
+  <source>Email Address</source>
+  <target>E-posta Adresi</target>
+</trans-unit>
+<trans-unit id="s3ced410ef8850869">
+  <source>Select Department</source>
+  <target>Departman Seçin</target>
+</trans-unit>
+<trans-unit id="s2c2b04f2561a1d4b">
+  <source>Analytics</source>
+  <target>Analitik</target>
+</trans-unit>
+<trans-unit id="s24aadbfb1b1a1a11">
+  <source>Tech</source>
+  <target>Teknoloji</target>
+</trans-unit>
+<trans-unit id="sd3b242173c2c4284">
+  <source>Select Position</source>
+  <target>Pozisyon Seçin</target>
+</trans-unit>
+<trans-unit id="s7404d9208a486318">
+  <source>Junior</source>
+  <target>Genç</target>
+</trans-unit>
+<trans-unit id="sacc4d771f79ccced">
+  <source>Medior</source>
+  <target>Orta</target>
+</trans-unit>
+<trans-unit id="s8a37652cc28d3c55">
+  <source>Senior</source>
+  <target>Kıdemli</target>
+</trans-unit>
+<trans-unit id="s32c9b3dd030fc24c">
+  <source>Add Employee</source>
+  <target>Çalışan Ekle</target>
+</trans-unit>
+<trans-unit id="sc8306ad1a022ddcc">
+  <source>Update Employee</source>
+  <target>Çalışanı Güncelle</target>
+</trans-unit>
+<trans-unit id="s2ceb11be2290bb1b">
+  <source>Cancel</source>
+  <target>İptal</target>
+</trans-unit>
+<trans-unit id="s3db6c3999daeecdb">
+  <source>Employee List</source>
+  <target>Çalışan Listesi</target>
+</trans-unit>
+<trans-unit id="scba00271d50c74f6">
+  <source>Employees</source>
+  <target>Çalışanlar</target>
+</trans-unit>
+<trans-unit id="s4ec58dc6a75753da">
+  <source>Add New</source>
+  <target>Yeni Ekle</target>
+</trans-unit>
+<trans-unit id="s2714784162ec459d">
+  <source>Proceed</source>
+  <target>Devam Et</target>
+</trans-unit>
+<trans-unit id="sf1e83e7f9890051a">
+  <source>Delete Employee</source>
+  <target>Çalışanı Sil</target>
+</trans-unit>
+<trans-unit id="s9da79bd03cb9316b">
+  <source>Delete Employees</source>
+  <target>Çalışanları Sil</target>
+</trans-unit>
+<trans-unit id="s65c5b16d67f0a4b9">
+  <source>No employees yet</source>
+  <target>Henüz çalışan yok</target>
+</trans-unit>
+<trans-unit id="s283fdcc962e9561c">
+  <source>Try adjusting your search criteria or clear the search to see all employees.</source>
+  <target>Arama kriterlerinizi ayarlamayı deneyin veya tüm çalışanları görmek için aramayı temizleyin.</target>
+</trans-unit>
+<trans-unit id="sd331ab208c689080">
+  <source>Get started by adding your first employee or loading sample data.</source>
+  <target>İlk çalışanınızı ekleyerek veya örnek verileri yükleyerek başlayın.</target>
+</trans-unit>
+<trans-unit id="sc35db2a76888e03b">
+  <source>Load Sample Data</source>
+  <target>Örnek Verileri Yükle</target>
+</trans-unit>
+<trans-unit id="sf2aeea4e183f759d">
+  <source>Deselect All</source>
+  <target>Tüm Seçimleri Kaldır</target>
+</trans-unit>
+<trans-unit id="sbaace8219b5f4612">
+  <source>Select All</source>
+  <target>Tümünü Seç</target>
+</trans-unit>
+<trans-unit id="scfcf587678724696">
+  <source>employees</source>
+  <target>çalışan</target>
+</trans-unit>
+<trans-unit id="s716a6024e3fe999c">
+  <source>Show</source>
+  <target>Göster</target>
+</trans-unit>
+<trans-unit id="s3d9ff57b4e7cc370">
+  <source>Table View</source>
+  <target>Tablo Görünümü</target>
+</trans-unit>
+<trans-unit id="s70315aaffba9e636">
+  <source>List View</source>
+  <target>Liste Görünümü</target>
+</trans-unit>
+<trans-unit id="s7ee5d9ca74bb7222">
+  <source>Are you sure you want to delete <x id="0" equiv-text="${employee.firstName} ${employee.lastName}"/>? This action cannot be undone.</source>
+  <target><x id="0" equiv-text="${employee.firstName} ${employee.lastName}"/> adlı çalışanı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</target>
+  <note from="lit-localize">Confirmation message for deleting a single employee</note>
+</trans-unit>
+<trans-unit id="s6344ded128ee728c">
+  <source>Are you sure you want to delete <x id="0" equiv-text="${this.employeeIds.length}"/> employee(s)? This action cannot be undone.</source>
+  <target><x id="0" equiv-text="${this.employeeIds.length}"/> çalışanı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.</target>
+  <note from="lit-localize">Confirmation message for deleting multiple employees</note>
+</trans-unit>
+<trans-unit id="s6e49c910704149ad">
+  <source><x id="0" equiv-text="${info.start}"/>-<x id="1" equiv-text="${info.end}"/> of <x id="2" equiv-text="${info.total}"/></source>
+  <target><x id="2" equiv-text="${info.total}"/> kayıttan <x id="0" equiv-text="${info.start}"/>-<x id="1" equiv-text="${info.end}"/></target>
+  <note from="lit-localize">Pagination info showing current range and total count</note>
+</trans-unit>
+</body>
+</file>
+</xliff>
