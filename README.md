@@ -2,9 +2,8 @@
 
 A modern web application built with LitElement for managing employee records, demonstrating proficiency in modern web technologies and best practices.
 
-![Test Coverage](https://img.shields.io/badge/coverage-88.38%25-brightgreen)
-[![Built with LitElement](https://img.shields.io/badge/built%20with-LitElement-blue.svg)](https://lit.dev/)
-[![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
+[![CI](https://github.com/fatihsolhan/employee-crud/workflows/CI/badge.svg)](https://github.com/fatihsolhan/employee-crud/actions)
+[![codecov](https://codecov.io/gh/fatihsolhan/employee-crud/branch/main/graph/badge.svg)](https://codecov.io/gh/fatihsolhan/employee-crud)
 
 ![Employee List View](./assets/screenshot.png)
 
